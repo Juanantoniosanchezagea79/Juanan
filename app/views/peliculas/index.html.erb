@@ -11,7 +11,8 @@
 	   <p>Año: <%= pelicula.year %></p>
       </hr>
       <%= link_to "Editar Pelicula", edit_pelicula_path(pelicula), class:"btn btn-md btn-success"%> 
-      <%= link_to "Eliminar Pelicula", pelicula_path(pelicula), method: :delete, class:"btn btn-md btn-warning"%>
+      <%= link_to "Eliminar Pelicula", pelicula_path(pelicula),
+       method: :delete, class:"btn btn-md btn-warning"%>
       <% end %>
       <hr>
       <%= link_to "Nueva Pelicula", new_pelicula_path, class:"btn btn-md btn-success" %> </br>

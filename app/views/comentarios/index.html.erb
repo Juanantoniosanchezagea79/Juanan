@@ -1,0 +1,17 @@
+<div class="container">
+
+     <h1>Aquí todas los comentarios que tenemos en la BBDD</h1>
+
+      <% @comentarios.each do |comentario| %>
+
+      <hr>
+      <p>Usuari: <%= comentario.usuari %></p>
+      <p>Pelicula: <%= comentario.pelicula %></p>
+      <p style='height: 100px; border: 1px solid black;'> <%= comentario.comentari %></p>
+      <% end %>
+
+	  
+      <hr>
+</br>
+
+</div>

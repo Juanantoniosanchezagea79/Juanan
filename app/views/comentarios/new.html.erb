@@ -1,0 +1,32 @@
+<div class="container">
+
+<h1>Nueva Comentario</h1>
+<%= form_for @comentario do |comentari| %>
+
+<p>
+	<%= comentari.label :usuari %> <br/>
+	<%= comentari.text_field :usuari %>
+</p>
+
+<p>
+	<%= comentari.label :pelicula %> <br/>
+	<%= comentari.text_field :pelicula %>
+</p>
+
+<p>
+	<%= comentari.label :comentari %> <br/>
+	<%= comentari.text_field :comentari %>
+</p>
+
+<%= comentari.submit "Añadir Comentario" %>
+
+<% end %>
+ 
+<br></br>
+
+<%= link_to "Listado de Peliculas", peliculas_path,class:"btn btn-md btn-danger" %> </br>
+
+<br></br>
+
+
+</div>
