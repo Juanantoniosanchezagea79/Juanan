@@ -1,0 +1,18 @@
+<div class="container">
+
+
+<b>Nombre de la pelicula:</b> <%= @pelicula.title %>  </br>
+<b>Valoración que tiene:</b> <%= @pelicula.valoration %> </br>
+<b>Director:</b> <%= @pelicula.director %> </br>
+<b>Año:</b> <%= @pelicula.year %> </br>
+<b>Se añadió a la base de datos el...:</b> <%= @pelicula.created_at %> </br>
+
+<hr>
+<%= link_to "Listado de Peliculas", peliculas_path, class:"btn btn-md btn-success"%> </br>
+<hr>
+<%= link_to "Eliminar Pelicula",pelicula_path, method: :delete, class:"btn btn-md btn-danger" %></br>
+<hr>
+
+</br></br>
+
+</div>

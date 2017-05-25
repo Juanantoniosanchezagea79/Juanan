@@ -1,2 +1,21 @@
-<h1>Peliculas#index</h1>
-<p>Find me in app/views/peliculas/index.html.erb</p>
+<div class="container">
+
+     <h1>Aquí todas las peliculas que tenemos en la BBDD</h1>
+
+      <% @peliculas.each do |pelicula| %>
+
+      <hr>
+	   <p>Titulo: <%= link_to pelicula.title, pelicula %></p>
+	   <p>Valoración: <%= pelicula.valoration %></p>
+	   <p>Director: <%= pelicula.director %></p>
+	   <p>Año: <%= pelicula.year %></p>
+      </hr>
+      <%= link_to "Editar Pelicula", edit_pelicula_path(pelicula), class:"btn btn-md btn-success"%> 
+      <%= link_to "Eliminar Pelicula", pelicula_path(pelicula), method: :delete, class:"btn btn-md btn-warning"%>
+      <% end %>
+      <hr>
+      <%= link_to "Nueva Pelicula", new_pelicula_path, class:"btn btn-md btn-success" %> </br>
+      <hr>
+</br>
+
+</div>

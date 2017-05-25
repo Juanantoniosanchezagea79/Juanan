@@ -1,0 +1,37 @@
+<div class="container">
+
+<h1>Nueva Pelicula</h1>
+<%= form_for @pelicula do |futbol| %>
+
+<p>
+	<%= futbol.label :title %> <br/>
+	<%= futbol.text_field :title %>
+</p>
+
+<p>
+	<%= futbol.label :valoration %> <br/>
+	<%= futbol.text_field :valoration %>
+</p>
+
+<p>
+	<%= futbol.label :director %> <br/>
+	<%= futbol.text_field :director %>
+</p>
+
+<p>
+	<%= futbol.label :year %> <br/>
+	<%= futbol.text_field :year %>
+</p>
+
+<%= futbol.submit "Añadir Pelicula" %>
+
+<% end %>
+ 
+<br></br>
+
+<%= link_to "Listado de Peliculas", peliculas_path,class:"btn btn-md btn-danger" %> </br>
+
+<br></br>
+
+
+</div>
