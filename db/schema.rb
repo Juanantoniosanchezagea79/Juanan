@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170525120404) do
+ActiveRecord::Schema.define(version: 20170525202120) do
+
+  create_table "comentarios", force: :cascade do |t|
+    t.string   "usuari"
+    t.integer  "pelicula"
+    t.string   "comentari"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "peliculas", force: :cascade do |t|
     t.string   "title"
