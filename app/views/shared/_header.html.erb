@@ -1,0 +1,60 @@
+<nav id="logo" class="navbar navbar-fixed-top navbar-default" role="navigation">
+   
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsable">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- BRAND -->
+      <a href="/home" id="brand-logo" class="navbar-brand"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapsable">
+    
+
+    <!-- NAVBAR -->
+    
+     
+      <ul class="nav navbar-nav foo navbar-right" id="menu" align="right">
+          <% if user_signed_in? %>
+                      <li><%= link_to '<i style="font-size:18px;color:white !important;" class="fa fa-sign-out fa-3"></i>&nbsp;Sign Out'.html_safe, destroy_user_session_path, method: :delete,style:'color:white;' %>  </li>
+                       <span style="color:white; font-weight: bold; line-height: 50px;">&nbsp;Logged:&nbsp;<%= current_user.email %></span>
+          <% else %>
+              <li><%=link_to "Sign up", new_user_registration_path, style:"float:left; color:white" %> </li>
+              <li><%= link_to "Login",  new_user_session_path, style:"float:left; color:white" %></li>
+          <% end %>
+         
+        
+        </li> <!-- end dropdown -->
+      </ul>
+       <!-- SEARCH BOX -->
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" size="50" placeholder="Search" name="q">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div> 
+          
+        </form>
+
+         <ul class="nav navbar-nav foo navbar-right" id="menu" align="right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Peliculas <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%=link_to "Listado peliculas",  peliculas_path, class: " linksheader" %>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to "Añadir pelicula",  new_pelicula_path, class: " linksheader" %>
+            </li>
+
+          </ul>
+        </li> 
+           <li>  <%=link_to "About Us", about_path, class: " linksheader" %></li>
+        </ul>
+    </div>
+  </div>
+</nav>

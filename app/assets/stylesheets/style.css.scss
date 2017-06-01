@@ -1,0 +1,188 @@
+body {  background-color: whitesmoke !important;  }
+
+.controladorej2 { 
+    margin-top: 9%;
+
+    font-family: 'Open Sans', sans-serif;    
+
+    .alert {
+         background: linear-gradient(141deg, #008000 0%, rgba(0, 128, 0, 0.61) 28%, rgb(255, 255, 255) 105%);
+         box-shadow: 1px 2px 1px gray;
+         text-shadow: 1px 2px 1px gray;
+         font-size: 2em;
+         width: 100%;
+    }
+    .btn {  box-shadow: 1px 2px 1px gray; color:white !important; }   
+    .message {
+        background-color: #E74C3C;    
+        color: #ECF0F1;    
+        border-radius: 7px;
+        padding: 5px 5px;
+    }
+    .color-blue { color: #3366cc; text-shadow: 1px 1px 2px black; }
+    .color-teal { color: teal; text-shadow: 1px 1px 2px black; }
+    .form-horizontal {
+        margin-top: 2%;
+        border: 2px solid gray;
+        border-radius: 10px;
+        box-shadow: 1px 2px 1px gray;
+     }
+    .form-horizontal:hover { border: 2px solid blue; }
+    .control-label { margin-top: 9px !important;}
+    .boxp { 
+      
+        background-color: white;
+        margin-top: 2%;
+        padding:3%;
+        border: 2px solid gray;
+        border-radius: 10px;
+        box-shadow: 1px 2px 1px gray;    
+       
+        height:100%;
+    }
+    .box {
+     
+        background-color: white;
+        margin-top: 2%;
+        padding:3%;
+        border: 2px solid gray;
+        border-radius: 10px;
+        box-shadow: 1px 2px 1px gray;    
+        
+        height:100%;
+
+    }
+    .box:hover, .boxp:hover { border: 2px solid green; }
+    .margin20 { margin-left: 20px;}   
+
+
+    @media(max-width:767px){ 
+    .box, .boxp { margin-left: 2% !important; width: 600px; }
+    }
+    @media(min-width:768px){ 
+    .box, .boxp { margin-left: 10% !important; width: 700px; }
+    }
+    @media(min-width:992px){ 
+    .box, .boxp { margin-left: 15% !important; width: 800px; }
+    }
+    @media(min-width:1200px){  
+      
+     .box, .boxp { margin-left: 20% !important;  width: 1000px; }  
+     }
+
+
+
+   
+ 
+
+}
+#logo {
+  
+   background-image: url("https://staticv2-4.rottentomatoes.com/static/images/logos/tomatocorner.png");
+    background-color: green;
+    background-repeat: no-repeat;
+      width: 100%; height: 100px;
+      
+}
+#brand-logo {
+ background-image: url("https://staticv2-4.rottentomatoes.com/static/images/logos/rtlogo.png");
+  background-repeat: no-repeat;
+      width: 400px; height: 100px;
+
+}
+.login { color:white !important; width:450px; float:right;}
+.nav > li > a, .navbar-text { color:white !important; font-weight: bold;  }
+.nav > li > a:visited { background-color: green !important;    }
+
+
+
+#footer{
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    position : fixed;
+    bottom : 0;
+    margin-top : 20px;
+    list-style-type: none !important;
+    
+    
+}
+.footer-text{
+    color: white;
+    a{
+        color: white;
+    }
+    a:hover {
+        text-decoration: none;
+        color: green;
+    }
+}
+.linksheader{
+
+}
+
+ .cartelera{
+   margin-top: 150px;
+   margin-bottom: solid 1000px;
+   padding: 125px;
+   background-color: green;
+
+} 
+
+.poster1{
+    margin-top: 50px;
+    padding: 50px;
+    width: 100%;
+
+}
+
+.about{
+   margin-top: 150px;
+   margin-bottom: solid 1000px;
+   background-color: green;
+
+}
+
+#poster3-text{
+     color: white;
+     text-align: center;
+     display: table-cell;
+     vertical-align: middle;
+     height: 250px;
+ }
+
+
+.container-general{
+    margin-top: 150px;
+    display: table-cell;   
+    vertical-align: middle;
+}
+
+.registro{
+   margin-top: 150px;
+   margin-bottom: solid 1000px;
+   padding: 125px;
+   background-color: green;
+   text-align: center;
+   color: white;
+   position : fixed;
+   position: fixed;
+   margin: auto; 
+   margin-left: 316px;
+   height: 560px;
+}
+
+.container-log{
+   margin-top: 150px;
+   margin-bottom: solid 1000px;
+   padding: 125px;
+   background-color: green;
+   text-align: center;
+   color: white;
+   position : fixed;
+   position: fixed;
+   margin: auto; 
+   margin-left: 316px;
+   height: 560px;
+}
+     

@@ -1,0 +1,51 @@
+<%= render "shared/header" %>
+
+<div class="controladorej2">
+
+ <div class="boxp">
+    <div class="alert"><i class="fa fa-home fa-1x color-teal"></i>&nbsp;Listado</div>  
+    <table class="table table-bordered table-hover table-striped">
+      <thead class="bg-danger">
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Calificación</th>
+          <th>Actor</th>
+          <th>Año</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+       <% @peliculas.each do |peli| %>
+          <tr>
+            <td><%= peli.id  %> </td>
+            <td>
+              <%= peli.name %>
+            </td>
+             <td>
+              <%= peli.stars %>
+            </td>
+             <td>
+              <%= peli.main_actor %>
+            </td>
+            <td>
+              <%= peli.year %>
+            </td>
+            <td align="center">
+              <%= link_to '', pelicula_path(peli), :title => "Visualizar", :class => 'btn btn-sm btn-success fa fa-search', style:"color: white;" %>
+              <%= link_to '', edit_pelicula_path(peli), :title => "Editar", :class => 'btn btn-sm btn-primary fa fa-edit', style:"color: white;" %>
+              <%= link_to '', { action: :destroy, id: peli.id }, method: :delete, :title => "Eliminar",:class => 'btn btn-sm btn-danger fa fa-close', style:"color: white;" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'Nueva Pelicula', new_pelicula_path, title:"Añade una nueva pelicula !!", class:"btn btn-sm btn-success" %>
+</div> <!-- end box -->     
+
+
+</div> <!-- end controladorej2 -->
+
+
+
+<%= render "shared/footer" %>
