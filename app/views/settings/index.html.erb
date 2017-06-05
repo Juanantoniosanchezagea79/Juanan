@@ -1,2 +1,33 @@
-<h1>Settings#index</h1>
-<p>Find me in app/views/settings/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+  <%= render "shared/header" %>  
+  </head>
+
+  <body>
+  <div class="container about"><!-- start container -->
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><!-- start columna1 -->
+      <div id= "poster1"><!-- start primer row -->
+        <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/mariecurie/cartelera.jpg" style="width:100%">
+      </div>
+    </div>
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><!-- start columna2 -->
+    <div id= "poster2">
+     <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/milcosasqueharaporti/cartelera.jpg" style="width:100%">
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><!-- start columna1 -->
+      <div ><!-- start primer row -->
+        <h1 id="poster3-text">Information for registered users only</h1>
+      </div>
+   </div>
+ </div>   
+    
+  </body>
+  <footer>
+  <%= render "shared/footer" %>  
+  </footer>
+</html>
+
+
+
