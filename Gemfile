@@ -55,7 +55,11 @@ gem 'font-awesome-rails'
 
 #user and admin user authentication
 gem 'devise'
+ 
 
-#gem 'bcrypt', platforms: :ruby
-gem 'bcrypt','~>3.1.11' 
-#gem "bcrypt-ruby", :require => "bcrypt"
+gem 'activeadmin', github: 'activeadmin'
+
+#gem 'bcrypt','~>3.1.11'  
+
+gem 'cancancan', '~> 2.0'
+
