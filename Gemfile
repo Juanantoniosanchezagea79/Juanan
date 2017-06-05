@@ -59,7 +59,7 @@ gem 'devise'
 
 gem 'activeadmin', github: 'activeadmin'
 
-#gem 'bcrypt','~>3.1.11'  
+gem 'bcrypt','~>3.1.11', platform: :ruby  
 
 gem 'cancancan', '~> 2.0'
 
