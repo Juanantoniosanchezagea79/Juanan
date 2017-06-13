@@ -1,0 +1,15 @@
+<div class="set">
+<%= form_for(@setting) do |f| %>
+ 
+        <div class="field">
+            <%= f.text_field :country, placeholder: "Country", class:"form-control" %>
+        </div>
+        <div class="field">
+            <%= f.text_field :language, placeholder: "Language", class:"form-control" %>
+        </div>    
+         
+        <div class="field">
+            <%= f.submit "Guardar", class:"white-center", style:"margin-top: 15px;" %>
+        </div>
+    <% end %>
+</div>
