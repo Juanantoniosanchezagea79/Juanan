@@ -19,6 +19,22 @@
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><!-- start columna1 -->
       <div ><!-- start primer row -->
         <h1 id="poster3-text">Information for registered users only</h1>
+
+         <!-- COMPROBACIO DE SETTING SI NO ES NULL -->     
+     <%if !@setting.nil?%>
+ 
+             <h3 id="pais-text">Country:&nbsp;<%= @setting.country %></h3><br/>
+             <h3 id="len-text">Language:&nbsp;<%= @setting.language %></h3><br/><br/>
+         
+            <%= link_to ' Editar', edit_setting_path(@setting.id), :title => "Editar", class: 'btn btn-md btn-primary', style:"color: white;" %>
+
+            <%= link_to ' Eliminar', {action: :destroy, id: @setting.id}, method: :delete, class: 'btn btn-md btn-danger', style:"color: white;" %>
+
+            <br></br>
+    <%else%>
+         <%= link_to 'Add country and language', new_setting_path, title:"Añadir pais e idioma", class:"btn btn-md btn-blue  text-center", style:"color:white; text-center;" %>
+    <%end%>
+
       </div>
    </div>
  </div>   

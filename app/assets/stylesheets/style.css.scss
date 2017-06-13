@@ -141,7 +141,8 @@ body {  background-color: whitesmoke !important;  }
    margin-top: 150px;
    margin-bottom: solid 1000px;
    background-color: green;
-
+   position : fixed;
+   height: 357px;
 }
 
 #poster3-text{
@@ -149,7 +150,7 @@ body {  background-color: whitesmoke !important;  }
      text-align: center;
      display: table-cell;
      vertical-align: middle;
-     height: 250px;
+     height: 100px;   
  }
 
 
@@ -215,4 +216,26 @@ body {  background-color: whitesmoke !important;  }
    height: 560px;
    padding: 102px;
 }
-     
+
+.set{
+   margin-top: 200px;
+   margin-bottom: solid 1000px;
+   padding: 125px;
+   background-color: green;
+   text-align: center;
+   color: white;
+   position : fixed;
+   position: fixed;
+   margin: auto; 
+   margin-left: 316px;
+   height: 560px;
+   padding: 192px;
+}
+
+.pais-text{
+  color: white;
+}
+  
+.len-text{
+  color: white;
+}     
