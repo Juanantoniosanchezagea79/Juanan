@@ -65,3 +65,5 @@ gem 'cancancan', '~> 2.0'
 
 gem 'active_admin_flat_skin'
 
+gem 'rails-i18n', '~> 5.0', '>= 5.0.4'
+

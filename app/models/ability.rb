@@ -8,14 +8,14 @@ class Ability
       if user.id == 1
          can :manage, :all
        else
-         #can :read, :all
-         can :read, Pelicula
+         can :read, :all
+        # can :read, Pelicula
          can :read, ActiveAdmin::Page, :name => "Dashboard"
          can :update_locate, User
          can :update_active, User
-         can :read, AwAccount
-         can :read, Domain
-         can :manage, AwGeotargeting
+        # can :read, AwAccount
+        # can :read, Domain
+        # can :manage, AwGeotargeting
          # , :attributes => [ :email, :locale]
        end
     

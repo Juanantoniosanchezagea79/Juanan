@@ -3,7 +3,9 @@ class SettingsController < ApplicationController
 	layout "admin"
 	
   def index
-  	@setting = current_user.setting
+  	@settings = current_user.setting
+    # @user = current_user
+    flash[:danger] = t('flash.titulo_index')
   end
 
   def show
@@ -18,6 +20,7 @@ class SettingsController < ApplicationController
   	@setting = current_user.build_setting(setting_params)
 
   	if @setting.save
+      # flash[:danger] = t('flash.hola')
   		redirect_to settings_path
   	else
   	 render :new
@@ -34,8 +37,10 @@ class SettingsController < ApplicationController
  
 
     if @setting.update_attributes(setting_params)
+       flash[:danger] = t('flash.registro_bien')
       redirect_to settings_path
     else
+       flash[:danger] = t('flash.registro_mal')
       render :index
     end
   end

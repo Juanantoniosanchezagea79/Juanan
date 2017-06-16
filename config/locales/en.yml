@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  titulo_index: "holaaa!"
+  registro_bien:  "Registrado con exito"
+  registro_mal: "Registro incorrecto !! "
