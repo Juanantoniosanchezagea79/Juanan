@@ -7,13 +7,12 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   get 'settings/index'
-
- 
-  resources :peliculas
   resources :settings
+  resources :peliculas
+  
   
   get '/about' => 'statics#about', :as => :about
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root :to => "statics#index", as: 'home'
+  root :to => "statics#index"
 end

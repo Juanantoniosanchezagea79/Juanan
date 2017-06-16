@@ -4,7 +4,7 @@
   <%= render "shared/header" %>  
   </head>
 
-  <body>
+   
   <div class="container about"><!-- start container -->
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><!-- start columna1 -->
       <div id= "poster1"><!-- start primer row -->
@@ -19,6 +19,16 @@
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><!-- start columna1 -->
       <div ><!-- start primer row -->
         <h1 id="poster3-text">Information for registered users only</h1>
+
+ 
+ <%if flash.present?%>
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-md-offset-3" style="padding:25px 0">
+        <%= render partial: "shared/flash_messages", flash: flash %>
+    </div>
+</div>
+<%end%>
+
 
          <!-- COMPROBACIO DE SETTING SI NO ES NULL -->     
      <%if !@setting.nil?%>
@@ -37,7 +47,9 @@
 
       </div>
    </div>
- </div>   
+ </div>  
+
+  
     
   </body>
   <footer>

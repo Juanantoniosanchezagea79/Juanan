@@ -3,7 +3,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
   def after_sign_up_path_for(resource)
 
-    settings_path
+    settings_index_path
+
   end  
   # GET /resource/sign_up
   # def new
