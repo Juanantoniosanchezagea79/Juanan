@@ -3,9 +3,9 @@ class SettingsController < ApplicationController
 	layout "admin"
 	
   def index
-  	@settings = current_user.setting
+  	@setting = current_user.setting
     # @user = current_user
-    flash[:danger] = t('flash.titulo_index')
+    flash[:danger] = t('Bienvenido')
   end
 
   def show

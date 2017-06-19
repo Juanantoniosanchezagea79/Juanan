@@ -6,18 +6,18 @@ class Ability
      user ||= AdminUser.new # guest user (not logged in)
 
       if user.id == 1
-         can :manage, :all
-       else
-         can :read, :all
-        # can :read, Pelicula
-         can :read, ActiveAdmin::Page, :name => "Dashboard"
-         can :update_locate, User
-         can :update_active, User
-        # can :read, AwAccount
-        # can :read, Domain
-        # can :manage, AwGeotargeting
-         # , :attributes => [ :email, :locale]
-       end
+          can :manage, :all
+        else
+       can :read, User
+       can :read, Pelicula
+       can :read, ActiveAdmin::Page, :name => "Dashboard"
+      #    # can :update_locate, User
+      #    # can :update_active, User
+      #   # can :read, AwAccount
+      #   # can :read, Domain
+      #   # can :manage, AwGeotargeting
+      #    # , :attributes => [ :email, :locale]
+      end
     
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
