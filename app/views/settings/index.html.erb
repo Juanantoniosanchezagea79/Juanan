@@ -2,9 +2,12 @@
 <html>
   <head>
   <%= render "shared/header" %>  
+   <%if flash.present?%>
+    <div id="flash">
+        <%= render partial: "shared/flash_messages", flash: flash %>
+    </div>
+  <% end %>
   </head>
-
-   
   <div class="container about"><!-- start container -->
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><!-- start columna1 -->
       <div id= "poster1"><!-- start primer row -->
@@ -33,18 +36,8 @@
          <%= link_to 'Add country and language', new_setting_path, title:"Añadir pais e idioma", class:"btn btn-md btn-blue  text-center", style:"color:white; text-center;" %>
     <%end%>
    </div>
-   <div class="row">
-     <%if flash.present?%>
-      <%= render partial: "shared/flash_messages", flash: flash %>
-        </div>
-    <%end%>
-
       </div>
    </div>
- </div>  
-</div> 
-  
-    
   </body>
   <footer>
   <%= render "shared/footer" %>  

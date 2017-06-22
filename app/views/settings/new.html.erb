@@ -1,22 +1,19 @@
 <div class="set">
-<%= form_for(@setting) do |f| %>
- 
+<br></br><br></br><br></br><br></br>
+<%if flash.present?%>
+    <div id="flash">
+        <%= render partial: "shared/flash_messages", flash: flash %>
+    </div>
+  <% end %>
+  <%= form_for(@setting) do |f| %>
         <div class="field">
             <%= f.text_field :country, placeholder: "Country", class:"form-control" %>
         </div>
         <div class="field">
             <%= f.text_field :language, placeholder: "Language", class:"form-control" %>
         </div>    
-         
         <div class="field">
             <%= f.submit "Guardar", class:"white-center", style:"margin-top: 15px;" %>
         </div>
     <% end %>
-   <%if flash.present?%>
-
-    <div class="col-sm-12 col-md-6 col-md-offset-3" style="padding:25px 0">
-        <%= render partial: "shared/flash_messages", flash: flash %>
-    </div>
-<%end%>
- 
 </div>
