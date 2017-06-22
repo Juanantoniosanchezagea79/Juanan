@@ -20,8 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-  titulo_index: "Welcome!"
-  registro_bien:  "Registered!"
-  registro_mal: "Not Registered!"
+ setting:
+    country: "Minimo dos caracteres "
+    language: "Minimo dos caracteres"
+    hello: "Hello world"
+    titulo_index: "Bienvenido!"
+    registro_bien:  "Añadido con exito!"
+    registro_mal: "Not Registered!"
 

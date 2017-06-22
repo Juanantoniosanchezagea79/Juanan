@@ -95,7 +95,13 @@ input{color: black !important;}
 .nav > li > a, .navbar-text { color:white !important; font-weight: bold;  }
 .nav > li > a:visited { background-color: green !important;    }
 
-
+#flash {
+  position: absolute;
+  z-index: 999;
+  width: 300px;
+  height: 100px;
+  margin-top: 60px;
+}
 
 #footer{
     background-color: black;

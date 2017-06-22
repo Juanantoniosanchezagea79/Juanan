@@ -5,22 +5,26 @@ class SettingsController < ApplicationController
   def index
   	@setting = current_user.setting
     # @user = current_user
-    flash[:danger] = t('Bienvenido')
+    # flash[:danger] = t('setting.titulo_index')
+    # flash[:notice] = t('setting.registro_bien')
   end
 
   def show
   	@setting = Setting.find(params[:id])
+    # flash[:notice] = t('setting.registro_bien')
   end
 
   def new
     @setting = current_user.build_setting
+    flash[:danger] = t('setting.country')
+    flash[:danger] = t('setting.language')
   end  
 
   def create
   	@setting = current_user.build_setting(setting_params)
 
   	if @setting.save
-      # flash[:danger] = t('flash.hola')
+      flash[:notice] = t('setting.registro_bien')
   		redirect_to settings_path
   	else
   	 render :new
@@ -37,11 +41,11 @@ class SettingsController < ApplicationController
  
 
     if @setting.update_attributes(setting_params)
-       flash[:danger] = t('flash.registro_bien')
+      # flash[:notice] = t('setting.registro_bien')
       redirect_to settings_path
     else
-       flash[:danger] = t('flash.registro_mal')
       render :index
+      # flash[:danger] = t('setting.registro_mal')
     end
   end
  
