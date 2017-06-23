@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'settings/index'
   resources :settings
   resources :peliculas
-  
+  resources :chargues
   
   get '/about' => 'statics#about', :as => :about
 
