@@ -67,3 +67,6 @@ gem 'active_admin_flat_skin'
 
 gem 'rails-i18n', '~> 5.0', '>= 5.0.4'
 
+gem 'stripe', '~> 2.12'
+
+gem 'dotenv-rails'
